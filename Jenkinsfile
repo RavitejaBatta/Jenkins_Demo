@@ -38,11 +38,11 @@ pipeline {
 			}
 		}
 
-		/*stage('Package') {
+		stage('Package') {
 			steps{
 				sh 'mvn package -DskipTests'
 			}
-		}*/
+		}
 
 		/*stage('Build Docker Image') {
 			steps{
