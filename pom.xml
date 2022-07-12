@@ -53,10 +53,6 @@
                 <version>${failsafe.version}</version>
                 <executions>
                     <execution>
-                        <goals>
-                            <goal>integration-test</goal>
-                            <goal>verify</goal>
-                        </goals>
                         <configuration>
                             <!-- JaCoCo must be enabled on target app container -->
                             <!--<argLine>${jacoco.itAgentConfig}</argLine> -->
