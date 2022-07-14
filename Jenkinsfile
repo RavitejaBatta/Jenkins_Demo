@@ -46,9 +46,8 @@ pipeline {
 
         stage('Jacoco Code Coverage') {
         			steps{
-        				sh './jenkins_build.sh'
-                        junit '*/build/test-results/*.xml'
-                        jacoco()
+                        junit '*/target/site/jacoco/*.xml'
+                        jacoco(execPattern:'*/target/jacoco.exec')
         			}
         		}
 
