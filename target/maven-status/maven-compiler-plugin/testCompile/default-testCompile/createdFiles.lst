@@ -1,0 +1,4 @@
+com/jenkins/lab/UnitTest/MyClassTest.class
+com/jenkins/lab/IT/MyClass_Integration.class
+com/jenkins/lab/UnitTest/PalindromeTest.class
+com/jenkins/lab/UnitTest/LockTest.class
