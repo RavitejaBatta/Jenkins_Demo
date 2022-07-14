@@ -44,6 +44,14 @@ pipeline {
 			}
 		}
 
+        stage('Jacoco Code Coverage') {
+        			steps{
+        				sh './jenkins_build.sh'
+                        junit '*/build/test-results/*.xml'
+                        jacoco()
+        			}
+        		}
+
 		/*stage('Build Docker Image') {
 			steps{
 				//docker build -t myjenkins/jenkinsmicroService:$env.BUILD_TAG
