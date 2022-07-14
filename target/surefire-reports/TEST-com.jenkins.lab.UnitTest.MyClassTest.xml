@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.jenkins.lab.UnitTest.MyClassTest" time="0.028" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.jenkins.lab.UnitTest.MyClassTest" time="0.035" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="18"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="GB"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-18.0.1.1.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/ravbatta/Documents/git/Jenkins_Demo/target/surefire/surefirebooter6957921503828651313.jar /Users/ravbatta/Documents/git/Jenkins_Demo/target/surefire 2022-07-14T18-28-24_009-jvmRun1 surefire651979398805832301tmp surefire_04211591743381546538tmp"/>
+    <property name="sun.java.command" value="/Users/ravbatta/Documents/git/Jenkins_Demo/target/surefire/surefirebooter2815164082431454458.jar /Users/ravbatta/Documents/git/Jenkins_Demo/target/surefire 2022-07-14T19-31-28_486-jvmRun1 surefire16142819472127458016tmp surefire_0559246352107457040tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/ravbatta/Documents/git/Jenkins_Demo/target/test-classes:/Users/ravbatta/Documents/git/Jenkins_Demo/target/classes:/Users/ravbatta/.m2/repository/junit/junit/4.8.1/junit-4.8.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -28,7 +28,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/ravbatta/Documents/git/Jenkins_Demo/target/surefire/surefirebooter6957921503828651313.jar"/>
+    <property name="surefire.real.class.path" value="/Users/ravbatta/Documents/git/Jenkins_Demo/target/surefire/surefirebooter2815164082431454458.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="18.0.1.1+2-6"/>
     <property name="user.name" value="ravbatta"/>
@@ -53,5 +53,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="java.class.version" value="62.0"/>
   </properties>
-  <testcase name="testKey" classname="com.jenkins.lab.UnitTest.MyClassTest" time="0.004"/>
+  <testcase name="testKey" classname="com.jenkins.lab.UnitTest.MyClassTest" time="0.005"/>
 </testsuite>
