@@ -29,8 +29,7 @@ pipeline {
         		}
         stage('Publish Static Code Analysis') {
                 	steps{
-                	recordIssues(tools: [pmdParser(pattern: 'target/pmd/pmd.xml'), checkStyle(pattern: 'target/checkstyle/checkstyle.xml')])
-                	recordIssues(tools: [checkStyle(pattern: 'target/checkstyle/checkstyle.xml')])
+                	recordIssues(tools: [pmdParser(pattern: '/target/pmd/pmd.xml'), checkStyle(pattern: 'target/checkstyle/checkstyle.xml')])
                 			}
                 		}
 
