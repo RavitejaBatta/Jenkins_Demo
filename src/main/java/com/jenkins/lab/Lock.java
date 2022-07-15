@@ -11,7 +11,7 @@ public class Lock {
     }
 
     public boolean unlock(Integer keyValue) {
-        if (this.keyValue == keyValue) {
+        if (this.keyValue.equals(keyValue)) {
             locked = false;
             return true;
         }
