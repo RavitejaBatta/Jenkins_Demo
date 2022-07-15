@@ -24,12 +24,15 @@ pipeline {
         			steps{
         				sh 'mvn pmd:pmd'
         				sh 'mvn checkstyle:checkstyle'
-        				//sh 'mvn findbugs:findbugs'
+        				sh 'mvn findbugs:findbugs'
         			}
         		}
         stage('Publish Static Code Analysis') {
                 	steps{
-                	recordIssues(tools: [pmdParser(pattern: '/target/pmd/pmd.xml'), checkStyle(pattern: 'target/checkstyle/checkstyle.xml')])
+                	recordIssues(tools: [
+                	    pmdParser(pattern: '/target/pmd/pmd.xml'),
+                	    checkStyle(pattern: '/target/checkstyle/checkstyle.xml'),
+                	    findBugs(pattern: '/target/findbugs/findbugs.xml', useRankAsPriority: true)])
                 			}
                 		}
 
