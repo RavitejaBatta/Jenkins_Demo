@@ -20,6 +20,12 @@ pipeline {
 				echo "BUILD_TAG - $env.BUILD_TAG"
 			}
 		}
+
+		stage('Compile') {
+			steps{
+				sh 'mvn clean compile'
+			}
+		}
 		stage('Static Code Analysis') {
         			steps{
         				sh 'mvn pmd:pmd'
