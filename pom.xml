@@ -18,6 +18,9 @@
         <surefire.version>2.22.1</surefire.version>
         <failsafe.version>2.22.1</failsafe.version>
         <jacoco.version>0.8.8</jacoco.version>
+        <pmd_version>3.13.0</pmd_version>
+        <checkstyle_version>3.1.1</checkstyle_version>
+        <findbugs_version>3.0.4</findbugs_version>
     </properties>
     <dependencies>
         <dependency>
@@ -78,6 +81,42 @@
                         <goals>
                             <goal>report</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>${pmd_version}</version>
+                <configuration>
+                    <linkXRef>true</linkXRef>
+                    <sourceEncoding>UTF-8</sourceEncoding>
+                    <minimumTokens>100</minimumTokens>
+                    <targetJdk>1.8</targetJdk>
+                    <format>xml</format>
+                    <outputDirectory>target/pmd/</outputDirectory>
+                    <targetDirectory>target/pmd/</targetDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals><goal>pmd</goal></goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${checkstyle_version}</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                    <failsOnError>false</failsOnError>
+                    <outputDirectory>target/checkstyle/</outputDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <goals><goal>checkstyle</goal></goals>
                     </execution>
                 </executions>
             </plugin>
