@@ -94,8 +94,8 @@
                     <minimumTokens>100</minimumTokens>
                     <targetJdk>1.8</targetJdk>
                     <format>xml</format>
-                    <outputDirectory>target/pmd/</outputDirectory>
-                    <targetDirectory>target/pmd/</targetDirectory>
+                    <outputDirectory>target/</outputDirectory>
+                    <targetDirectory>target/</targetDirectory>
                 </configuration>
                 <executions>
                     <execution>
@@ -111,7 +111,7 @@
                 <configuration>
                     <encoding>UTF-8</encoding>
                     <failsOnError>false</failsOnError>
-                    <outputDirectory>target/checkstyle/</outputDirectory>
+                    <outputDirectory>target/</outputDirectory>
                 </configuration>
                 <executions>
                     <execution>
@@ -130,7 +130,7 @@
                     <effort>Max</effort>
                     <!--<failOnError>false</failOnError>-->
                     <threshold>Low</threshold>
-                    <xmlOutputDirectory>target/findbugs/</xmlOutputDirectory>
+                    <xmlOutputDirectory>target/</xmlOutputDirectory>
                 </configuration>
                 <executions>
                     <execution>
