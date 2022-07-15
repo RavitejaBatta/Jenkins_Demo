@@ -10,7 +10,6 @@ pipeline {
 	stages{
 		stage('Checkout') {
 			steps{
-			    cleanWs(target)
 				sh 'mvn --version'
 				sh 'docker version'
 				echo "Build"
@@ -22,9 +21,9 @@ pipeline {
 			}
 		}
 
-		stage('Compile') {
+		stage('clean') {
 			steps{
-				sh 'mvn clean compile'
+				sh 'mvn clean '
 			}
 		}
 
@@ -44,7 +43,13 @@ pipeline {
                 	    findBugs(pattern: 'target/findbugs.xml')])
                 			}
                 		}
-		
+
+		stage('Compile') {
+        			steps{
+        				sh 'mvn compile'
+        			}
+        		}
+
 		stage('Test') {
 			steps{
 				sh 'mvn test'
