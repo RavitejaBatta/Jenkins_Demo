@@ -30,9 +30,9 @@ pipeline {
         stage('Publish Static Code Analysis') {
                 	steps{
                 	recordIssues(tools: [
-                	    pmdParser(pattern: '/var/jenkins_home/workspace/Jenkins-Demo-Project/target/pmd/pmd.xml'),
-                	    checkStyle(pattern: '/var/jenkins_home/workspace/Jenkins-Demo-Project/target/checkstyle/checkstyle.xml'),
-                	    findBugs(pattern: '/var/jenkins_home/workspace/Jenkins-Demo-Project/target/findbugs/findbugs.xml', useRankAsPriority: true)])
+                	    pmdParser(pattern: '**/target/pmd/pmd.xml'),
+                	    checkStyle(pattern: '**/target/checkstyle/checkstyle.xml'),
+                	    findBugs(pattern: '**/target/findbugs/findbugs.xml', useRankAsPriority: true)])
                 			}
                 		}
 
