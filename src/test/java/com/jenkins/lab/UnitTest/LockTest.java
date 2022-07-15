@@ -1,12 +1,12 @@
 package com.jenkins.lab.UnitTest;
-
+import java.io.StringReader;
 import com.jenkins.lab.Lock;
 import junit.framework.Assert;
 import org.junit.Test;
 public class LockTest {
 
     @Test
-    public void testLock(){
+        public void testLock(){
 
         Lock lock = new Lock(10);
 

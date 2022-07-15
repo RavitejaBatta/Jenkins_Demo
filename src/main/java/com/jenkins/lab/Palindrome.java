@@ -8,12 +8,13 @@ public class Palindrome {
         if (inputString == null) {
             throw new IllegalArgumentException("Input Should not be null");
         }
+        else{}
 
-        if (inputString.equals(reverse(inputString))) {
-            return true;
-        } else {
-            return false;
-        }
+            if (inputString.equals(reverse(inputString))) {
+                return true;
+            } else {
+                return false;
+            }
     }
         private String reverse(String input){
 
