@@ -26,6 +26,7 @@ pipeline {
 				sh 'mvn clean compile'
 			}
 		}
+
 		stage('Static Code Analysis') {
         			steps{
         				sh 'mvn pmd:pmd'
@@ -33,6 +34,7 @@ pipeline {
         				sh 'mvn findbugs:findbugs'
         			}
         		}
+
         stage('Publish Static Code Analysis') {
                 	steps{
                 	recordIssues(tools: [
@@ -41,12 +43,6 @@ pipeline {
                 	    findBugs(pattern: '**/target/findbugs/findbugs_1.xml')])
                 			}
                 		}
-
-		stage('Compile') {
-			steps{
-				sh 'mvn clean compile'
-			}
-		}
 		
 		stage('Test') {
 			steps{
