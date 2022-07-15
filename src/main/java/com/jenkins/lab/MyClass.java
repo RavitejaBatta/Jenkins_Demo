@@ -1,10 +1,13 @@
 package com.jenkins.lab;
 
+import java.util.Date;
+
 public class MyClass {
 
     private  String name;
     private Integer id;
     private Integer secret;
+    private Date date;
 
     public Integer calculatorKey(){
 
@@ -22,6 +25,9 @@ public class MyClass {
         return id;
     }
 
+    public java.util.Date getDate(){
+        return date;
+    }
     public void setId(Integer id){
         this.id = id;
     }
