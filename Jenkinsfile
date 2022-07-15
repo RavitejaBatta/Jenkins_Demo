@@ -38,9 +38,9 @@ pipeline {
         stage('Publish Static Code Analysis') {
                 	steps{
                 	recordIssues(tools: [
-                	    pmdParser(pattern: '**/target/pmd.xml'),
-                	    checkStyle(pattern: '**/target/checkstyle.xml'),
-                	    findBugs(pattern: '**/target/findbugs.xml')])
+                	    pmdParser(pattern: 'target/pmd.xml'),
+                	    checkStyle(pattern: 'target/checkstyle.xml'),
+                	    findBugs(pattern: 'target/findbugs.xml')])
                 			}
                 		}
 		
