@@ -126,6 +126,7 @@
                 <version>${findbugs_version}</version>
                 <configuration>
                     <xmlOutput>true</xmlOutput>
+                    <sourceEncoding>UTF-8</sourceEncoding>
                     <effort>Max</effort>
                     <!--<failOnError>false</failOnError>-->
                     <threshold>Low</threshold>
