@@ -10,7 +10,7 @@ pipeline {
 	stages{
 		stage('Checkout') {
 			steps{
-			    cleanWs()
+			    cleanWs(target/)
 				sh 'mvn --version'
 				sh 'docker version'
 				echo "Build"
