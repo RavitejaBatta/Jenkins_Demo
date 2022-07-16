@@ -146,6 +146,7 @@
                 <configuration>
                     <xmlOutput>true</xmlOutput>
                     <failOnError>false</failOnError>
+                    <xmlOutputDirectory>target/</xmlOutputDirectory>
                 </configuration>
                 <executions>
                     <execution>
