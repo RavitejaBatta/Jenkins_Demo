@@ -32,7 +32,7 @@ pipeline {
         				sh 'mvn pmd:pmd'
         				sh 'mvn checkstyle:checkstyle'
         				sh 'mvn findbugs:findbugs'
-        				sh 'mvn spotbugs:spotbugs'
+        				//sh 'mvn spotbugs:spotbugs'
         			}
         		}
 
@@ -41,8 +41,8 @@ pipeline {
                 	recordIssues(tools: [
                 	    pmdParser(pattern: 'target/pmd.xml'),
                 	    checkStyle(pattern: 'target/checkstyle-result.xml',reportEncoding: 'UTF-8'),
-                	    findBugs(pattern: '**/findbugsXml.xml',skipSymbolicLinks: true, reportEncoding: 'UTF-8', useRankAsPriority: true),
-                	    spotBugs(useRankAsPriority: true)
+                	    findBugs(pattern: 'target/findbugsXml.xml',skipSymbolicLinks: true, reportEncoding: 'UTF-8', useRankAsPriority: true),
+                	    //spotBugs(useRankAsPriority: true)
                 	    ])
                 			}
                 		}
