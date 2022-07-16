@@ -124,11 +124,11 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
                 <version>${findbugs_version}</version>
-                <configuration>
+                <!--<configuration>
                     <xmlOutput>true</xmlOutput>
                     <sourceEncoding>UTF-8</sourceEncoding>
                     <effort>Max</effort>
-                    <!--<failOnError>false</failOnError>-->
+                    <failOnError>false</failOnError>
                     <threshold>Low</threshold>
                     <xmlOutputDirectory>target/</xmlOutputDirectory>
                 </configuration>
@@ -137,7 +137,7 @@
                         <phase>validate</phase>
                         <goals><goal>findbugs</goal></goals>
                     </execution>
-                </executions>
+                </executions>-->
             </plugin>
         </plugins>
     </build>
