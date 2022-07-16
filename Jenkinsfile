@@ -42,7 +42,7 @@ pipeline {
                 	    checkStyle(pattern: 'target/checkstyle-result.xml',reportEncoding: 'UTF-8'),
                 	    findBugs(pattern: '**/*Xml.xml',skipSymbolicLinks: true, reportEncoding: 'UTF-8', useRankAsPriority: true),
                 	    spotBugs(useRankAsPriority: true)
-                	    })
+                	    ])
                 			}
                 		}
 
