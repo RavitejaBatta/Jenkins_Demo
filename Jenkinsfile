@@ -29,9 +29,10 @@ pipeline {
 
 		stage('Static Code Analysis') {
         			steps{
+        			    sh 'mvn findbugs:findbugs'
         				sh 'mvn pmd:pmd'
         				sh 'mvn checkstyle:checkstyle'
-        				sh 'mvn findbugs:findbugs'
+
         				//sh 'mvn spotbugs:spotbugs'
         			}
         		}
@@ -39,9 +40,10 @@ pipeline {
         stage('Publish Static Code Analysis') {
                 	steps{
                 	recordIssues(tools: [
+                	    findBugs(pattern: 'target/findbugsXml.xml', useRankAsPriority: true),
                 	    pmdParser(pattern: 'target/pmd.xml'),
                 	    checkStyle(pattern: 'target/checkstyle-result.xml',reportEncoding: 'UTF-8'),
-                	    findBugs(pattern: '**/target/findbugsXml.xml',skipSymbolicLinks: true, reportEncoding: 'UTF-8', useRankAsPriority: true),
+                	    //findBugs(pattern: '**/target/findbugsXml.xml',skipSymbolicLinks: true, reportEncoding: 'UTF-8', useRankAsPriority: true)
                 	    //spotBugs(useRankAsPriority: true)
                 	    ])
                 			}
