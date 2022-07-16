@@ -39,8 +39,8 @@ pipeline {
                 	steps{
                 	recordIssues(tools: [
                 	    pmdParser(pattern: 'target/pmd.xml'),
-                	    checkStyle(pattern: 'target/checkstyle-checker.xml',reportEncoding: 'UTF-8'),
-                	    findBugs(pattern: 'target/findbugs.xml', reportEncoding: 'UTF-8')])
+                	    checkStyle(pattern: 'target/checkstyle-result.xml',reportEncoding: 'UTF-8'),
+                	    findBugs(pattern: 'target/findbugs.xml', reportEncoding: 'UTF-8', useRankAsPriority: true)])
                 			}
                 		}
 
