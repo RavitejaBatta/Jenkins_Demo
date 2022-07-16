@@ -32,6 +32,7 @@ pipeline {
         				sh 'mvn pmd:pmd'
         				sh 'mvn checkstyle:checkstyle'
         				sh 'mvn findbugs:findbugs'
+        				sh 'mvn spotbugs:spotbugs'
         			}
         		}
 
