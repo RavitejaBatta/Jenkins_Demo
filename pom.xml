@@ -131,6 +131,7 @@
                     <failOnError>false</failOnError>
                     <threshold>Low</threshold>
                     <xmlOutputDirectory>target/</xmlOutputDirectory>
+                    <findbugsXmlOutput>true</findbugsXmlOutput>
                 </configuration>
                 <executions>
                     <execution>
