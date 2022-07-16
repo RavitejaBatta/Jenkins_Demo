@@ -21,11 +21,6 @@ pipeline {
 			}
 		}
 
-		stage('clean') {
-			steps{
-				sh 'mvn clean '
-			}
-		}
 
 		stage('Static Code Analysis') {
         			steps{
