@@ -40,7 +40,7 @@ pipeline {
         stage('Publish Static Code Analysis') {
                 	steps{
                 	recordIssues(tools: [
-                	    findBugs(pattern: 'target/findbugsXml.xml', useRankAsPriority: true),
+                	    findBugs(pattern: 'target/findbugs.xml', useRankAsPriority: true),
                 	    pmdParser(pattern: 'target/pmd.xml'),
                 	    checkStyle(pattern: 'target/checkstyle-result.xml',reportEncoding: 'UTF-8'),
                 	    //findBugs(pattern: '**/target/findbugsXml.xml',skipSymbolicLinks: true, reportEncoding: 'UTF-8', useRankAsPriority: true)
