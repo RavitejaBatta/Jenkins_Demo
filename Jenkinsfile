@@ -71,6 +71,14 @@ pipeline {
                         jacoco(execPattern:'target/jacoco.exec')
         			}
         		}
+             stage('Sonarqube Analysis') {
+                    	steps{
+                              script{
+                              withSonarQubeEnv('SonarServer'){
+                              sh 'mvn sonar:sonar'
+                              }
+                    			}
+                    		}
 
 		/*stage('Build Docker Image') {
 			steps{
