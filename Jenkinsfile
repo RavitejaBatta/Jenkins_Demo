@@ -73,12 +73,10 @@ pipeline {
         		}
              stage('Sonarqube Analysis') {
                     	steps{
-                              script{
-                              withSonarQubeEnv('SonarServer'){
+                              withSonarQubeEnv(credentialsId: 'sonar-api-key'){
                               sh 'mvn sonar:sonar'
                               }
-                    			}
-                    		}
+                   }
 
 		/*stage('Build Docker Image') {
 			steps{
