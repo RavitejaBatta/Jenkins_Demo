@@ -77,7 +77,7 @@ pipeline {
                               sh 'mvn sonar:sonar'
                               }
                    }
-
+            }
 		/*stage('Build Docker Image') {
 			steps{
 				//docker build -t myjenkins/jenkinsmicroService:$env.BUILD_TAG
