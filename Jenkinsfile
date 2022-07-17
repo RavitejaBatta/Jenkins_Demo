@@ -73,7 +73,7 @@ pipeline {
         		}
              stage('Sonarqube Analysis') {
                     	steps{
-                              withSonarQubeEnv(credentialsId: 'sonar-api-key'){
+                              withSonarQubeEnv('SonarServer',credentialsId: 'sonar-api-key'){
                               sh 'mvn sonar:sonar'
                               }
                    }
