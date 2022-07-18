@@ -71,11 +71,11 @@ pipeline {
                         jacoco(execPattern:'target/jacoco.exec')
         			}
         		}
-             stage('Sonarqube Analysis') {
-                    	node{
-                              withSonarQubeEnv('SonarServer'){
-                              sh 'mvn sonar:sonar'
-                              }
+        stage('Sonarqube Analysis') {
+                    steps{
+                        withSonarQubeEnv('SonarServer'){
+                            sh 'mvn sonar:sonar'
+                        }
                    }
             }
 		/*stage('Build Docker Image') {
