@@ -72,8 +72,8 @@ pipeline {
         			}
         		}
              stage('Sonarqube Analysis') {
-                    	steps{
-                              withSonarQubeEnv('SonarServer',credentialsId: 'sonar-api-key'){
+                    	node{
+                              withSonarQubeEnv('SonarServer'){
                               sh 'mvn sonar:sonar'
                               }
                    }
