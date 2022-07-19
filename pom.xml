@@ -21,10 +21,7 @@
         <pmd_version>3.13.0</pmd_version>
         <checkstyle_version>3.1.1</checkstyle_version>
         <findbugs_version>3.0.4</findbugs_version>
-        <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <sonar.login>myYy22heDo+V8wQirCcCEE938H/Gn21KVZJRlCKFSuY=</sonar.login>
-        <sonar.language>java</sonar.language>
-        <sonar.scm.provider>git</sonar.scm.provider>
+        <sonar.java.binaries>target/classes</sonar.java.binaries>
     </properties>
     <dependencies>
         <dependency>

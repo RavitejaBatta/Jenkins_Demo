@@ -2,5 +2,5 @@ projectKey=org.example:Jenkins_Repo
 serverUrl=http://localhost:9000
 serverVersion=9.5.0.56709
 dashboardUrl=http://localhost:9000/dashboard?id=org.example%3AJenkins_Repo
-ceTaskId=AYIMhFsBFLX4DGA2hxZ3
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AYIMhFsBFLX4DGA2hxZ3
+ceTaskId=AYIXlWygAaVfLZQY6d4u
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYIXlWygAaVfLZQY6d4u
