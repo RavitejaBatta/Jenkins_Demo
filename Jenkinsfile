@@ -72,8 +72,12 @@ pipeline {
         			}
         		}
         stage('Sonarqube Analysis') {
+                environment{
+                        SCANNER_HOME = tool 'Sonar-scanner'
+                    }
                     steps{
                         withSonarQubeEnv('SonarServer'){
+                            sh '$SCANNER_HOME/bin/sonar-scanner'
                             sh 'mvn sonar:sonar'
                         }
                    }
