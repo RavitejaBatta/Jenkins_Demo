@@ -72,13 +72,13 @@ pipeline {
         			}
         		}
         stage('Sonarqube Analysis') {
-                environment{
-                        SCANNER_HOME = tool 'Sonar-scanner'
-                    }
-                    steps{
-                        withSonarQubeEnv('SonarServer'){
-                            sh '$SCANNER_HOME/bin/sonar-scanner'
-                            sh 'mvn sonar:sonar'
+                def scannerHome = tool 'SonarScanner 4.0';
+                steps{
+                     withSonarQubeEnv('SonarServer', envOnly: true){
+                         println ${env.SONAR_HOST_URL}
+
+                         sh '${scannerHome}/bin/sonar-scanner'
+                         sh 'mvn sonar:sonar'
                         }
                    }
             }
