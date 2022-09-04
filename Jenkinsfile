@@ -71,13 +71,13 @@ pipeline {
                         jacoco(execPattern:'target/jacoco.exec')
         			}
         		}
-        stage('Sonarqube Analysis') {
+        /*stage('Sonarqube Analysis') {
                 steps{
                      withSonarQubeEnv(installationName: 'sonarqube'){
                          sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.8.0.2131:sonar'
                         }
                    }
-            }
+            }*/
 		/*stage('Build Docker Image') {
 			steps{
 				//docker build -t myjenkins/jenkinsmicroService:$env.BUILD_TAG
